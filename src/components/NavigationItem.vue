@@ -65,6 +65,7 @@ export default {
       font-size: 18px;
       font-family: 'Lato',Arial,sans-serif;
       font-weight: 600;
+      margin-top: 10px;
     }
   }
   @media (max-width: 768px) {

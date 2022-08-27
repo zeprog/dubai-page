@@ -54,7 +54,7 @@ export default {
   background-position: center;
   width: 100%;
   height: 100%;
-  position: absolute;
+  // position: absolute;
   @media (max-width: 768px) {
     overflow-x: hidden;
     position: absolute;
