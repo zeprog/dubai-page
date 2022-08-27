@@ -89,6 +89,11 @@ export default {
       margin-right: 60px;
     }
   }
+  @media (max-width: 768px) {
+    overflow-y: hidden;
+    height: 75vh;
+    align-items: center;
+  }
 }
 @keyframes startAnimate {
   0% {

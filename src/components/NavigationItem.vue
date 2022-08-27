@@ -74,12 +74,12 @@ export default {
     &-item {
       &__img {
         img {
-          width: 25px;
-          height: 25px;
+          width: 40px;
+          height: 40px;
         }
       }
       &__title {
-        font-size: 14px;
+        font-size: 16px;
       }
     }
   }

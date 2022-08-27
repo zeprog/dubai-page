@@ -54,8 +54,10 @@ export default {
   background-position: center;
   width: 100%;
   height: 100%;
+  position: absolute;
   @media (max-width: 768px) {
     overflow-x: hidden;
+    position: absolute;
   }
 }
 .content {
@@ -75,7 +77,7 @@ export default {
     animation-duration: 1s;
   }
   @media (max-width: 768px) {
-    right: 30px;
+    right: 35px;
   }
 }
 .nav {
@@ -87,7 +89,9 @@ export default {
     animation-duration: 1s;
   }
   @media (max-width: 768px) {
-    position: relative;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
   }
 }
 @keyframes startAnimate {

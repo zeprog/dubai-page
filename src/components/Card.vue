@@ -175,8 +175,35 @@ export default {
     }
   }
   &__image-block {
-    width: 48%;
+    width: 48% !important;
     height: 100px;
+  }
+  @media (max-width: 768px) {
+    height: 420px;
+    width: 300px;
+    &__image {
+      width: 100%;
+      img {
+        height: 125px;
+      }
+    }
+    &__text {
+      &-title {
+        font-size: 28px;
+      }
+      &-block {
+        p {
+          font-size: 18px;
+        }
+      }
+      
+    }
+    &__image-block {
+      height: 67px !important;
+      img {
+        height: 90%;
+      }
+    }
   }
 }
 </style>

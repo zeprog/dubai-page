@@ -36,5 +36,16 @@ export default {
       font-weight: 600;
     }
   }
+  @media (max-width: 768px) {
+    justify-content: space-between;
+    &__item {
+      &__img {
+        img {
+          width: 70px;
+          height: 70px;
+        }
+      }
+    }
+  }
 }
 </style>
