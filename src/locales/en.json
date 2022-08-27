@@ -1,0 +1,26 @@
+{
+  "card": {
+    "title": [
+      "100 apartments for investment",
+      "Apartments for rent",
+      "The most expensive projects",
+      "Apartments",
+      "Deals",
+      "Trade Up",
+      "Estimation",
+      "Price index"
+    ],
+    "text": [
+      "Rating of flats apartments for investment in Dubai",
+      "Apartments with a yield of 12% per annum in Dubai",
+      "Apartments in houses where millionaires live",
+      "Apartments at below market prices",
+      "History of real estate deals",
+      "Exchange your apartment for a new one",
+      "Rate the apartment in 10 seconds",
+      "Price index and liquidity of districts"
+    ],
+    "button": "Let's look"
+  },
+  "nav": ["Apartments", "Deals", "Estimation", "Trade Up", "Price index"]
+}
