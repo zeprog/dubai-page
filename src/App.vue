@@ -1,11 +1,14 @@
 <template>
   <div id="app">
-    <Header />
-    <div class="lang-switcher">
-      <LangSwitcher />
+    <Loader v-if="loading" />
+    <div class="content " v-else>
+      <Header class="content__header startAnimate" />
+      <div class="lang-switcher startAnimate">
+        <LangSwitcher />
+      </div>
+      <Slider class="slider-block" />
+      <Navigation class="nav startAnimateNav" />
     </div>
-    <Slider class="slider-block" />
-    <Navigation class="nav" />
   </div>
 </template>
 
@@ -14,6 +17,7 @@ import Header from '@/components/Header.vue'
 import LangSwitcher from '@/components/LangSwitcher.vue';
 import Slider from '@/components/Slider.vue';
 import Navigation from '@/components/Navigation.vue';
+import Loader from '@/components/Loader.vue';
 
 export default {
   name: 'App',
@@ -21,8 +25,20 @@ export default {
     Header,
     LangSwitcher,
     Slider,
-    Navigation
+    Navigation,
+    Loader
+},
+  data() {
+    return {
+      loading: true,
+
+    }
   },
+  mounted() {
+    setTimeout(() => {
+      this.loading = false
+    }, 2000)
+  }
 }
 </script>
 
@@ -36,14 +52,28 @@ export default {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  width: 100%;
+  height: 100%;
   @media (max-width: 768px) {
     overflow-x: hidden;
+  }
+}
+.content {
+  &__header {
+    &.startAnimate {
+      animation-name: startAnimate;
+      animation-duration: 1s;
+    }
   }
 }
 .lang-switcher {
   position: absolute;
   right: 70px;
   top: 15px;
+  &.startAnimate {
+    animation-name: startAnimate;
+    animation-duration: 1s;
+  }
   @media (max-width: 768px) {
     right: 30px;
   }
@@ -52,8 +82,32 @@ export default {
   position: relative;
   z-index: 2;
   margin-top: 10px;
+  &.startAnimateNav {
+    animation-name: startAnimateNav;
+    animation-duration: 1s;
+  }
   @media (max-width: 768px) {
     position: relative;
+  }
+}
+@keyframes startAnimate {
+  0% {
+    opacity: 0;
+    transform: translateY(-200%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes startAnimateNav {
+  0% {
+    opacity: 0;
+    transform: translateY(200%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 </style>

@@ -8,7 +8,7 @@
     @mousedown="onMouseDown"
     @mouseup="onMouseUp"
   >
-    <div v-for="(card, i) of cards" :key="i" class="slider__slide">
+    <div v-for="(card, i) of cards" :key="i" class="slider__slide startAnimate">
       <Card :card="card" />
     </div>
   </div>
@@ -70,12 +70,15 @@ export default {
 .slider {
   display: flex;
   overflow-x: auto;
-  // width: 100vw;
   position: relative;
   &__slide {
-    padding: 40px 0 60px;
+    padding: 40px 0 35px;
     position: relative;
     margin: 0 12.5px;
+    &.startAnimate {
+      animation-name: startAnimate;
+      animation-duration: 2s;
+    }
     &:first-child {
       margin-left: 580px;
       @media (max-width: 768px) {
@@ -85,6 +88,20 @@ export default {
     &:last-child {
       margin-right: 60px;
     }
+  }
+}
+@keyframes startAnimate {
+  0% {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  75% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
   }
 }
 </style>
