@@ -22,29 +22,6 @@ export default {
       return this.$i18n.locale === 'ru' ? this.nav.hrefRu : this.nav.hrefEn
     },
   },
-  methods: {
-    handleScroll: function (evt, el) {
-      if (window.scrollY > 50) {
-        el.setAttribute(
-          'style',
-          'opacity: 1; transform: translate3d(0, -10px, 0)'
-        )
-      }
-      return window.scrollY > 100
-    }
-  },
-  directives: {
-    scroll: {
-      inserted(el, binding) {
-        let f = function (evt) {
-          if (binding.value(evt, el)) {
-            window.removeEventListener('scroll', f)
-          }
-        }
-        window.addEventListener('scroll', f)
-      }
-    }
-  }
 }
 </script>
 
